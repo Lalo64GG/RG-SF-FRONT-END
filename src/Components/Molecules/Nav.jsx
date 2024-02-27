@@ -66,7 +66,7 @@ export const Nav = () => {
                 </li>
               </Link>
               <Link spy= {true} smooth={true} to="/projects">
-              <li className="hover:text-[#03A460] transition py-2 px-2 hover:border-b-2 hover:border-slate-900 hover:border-[#03A460] cursor-pointer">
+              <li className="hover:text-[#03A460] transition py-2 px-2 hover:border-b-2  hover:border-[#03A460] cursor-pointer">
                 <FaEnvelope className="inline mr-2" />
                   Contact
                 </li>
