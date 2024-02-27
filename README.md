@@ -25,5 +25,5 @@ Para empezar con RG/SF, sigue estos pasos:
     Mejora de la eficiencia en la gestión de encierros.
     ¡Bienvenido a bordo con RG/SF! Si tienes preguntas o encuentras problemas, no dudes en reportar un problema.
 
-[.!NOTE]    
+.[!NOTE]    
 Nota: Asegúrate de tener Node.js instalado para poder ejecutar la aplicación.
