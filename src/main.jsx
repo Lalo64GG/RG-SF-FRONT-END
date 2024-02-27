@@ -10,7 +10,7 @@ import { Layout } from './Components/Layout.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/login",
+    path: "/",
     element: <Login />,
     index: true
   },

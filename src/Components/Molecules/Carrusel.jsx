@@ -18,7 +18,7 @@ export const Carousel = () => {
     <Slider {...settings}>
       <div className=' flex justify-center items-center'>
         <h3>Slide 1</h3>
-        <img className='w-full h-56' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDRbZbkhT3GNPpYYrzDk36V-dhPcmB6MdccFbx9wDhig&s" alt="Slide 1" />
+        <img className='w-full h-60' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDRbZbkhT3GNPpYYrzDk36V-dhPcmB6MdccFbx9wDhig&s" alt="Slide 1" />
       </div>
       <div>
         <h3>Slide 2</h3>

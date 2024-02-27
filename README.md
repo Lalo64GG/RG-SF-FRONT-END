@@ -14,9 +14,11 @@ Para empezar con RG/SF, sigue estos pasos:
    ```bash
    git clone https://github.com/TuUsuario/RG-SF.git
 2.- Instala las dependencias:
+    ```bash
     cd RG-SF
     npm install
 3.- Inicia la aplicación:
+    ```bash
     npm run dev
 
 ## Características Principales

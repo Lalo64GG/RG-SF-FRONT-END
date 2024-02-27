@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FaTimes, FaHome, FaClipboardList, FaBriefcase, FaUser, FaEnvelope } from "react-icons/fa";
+import { MdOutlineVaccines } from "react-icons/md"
 
-import { CiMenuFries } from "react-icons/ci"
+import { CiMenuFries, CiLogout } from "react-icons/ci"
 
 export const Nav = () => {
 
@@ -13,7 +14,7 @@ export const Nav = () => {
 
   const content = (
     < >
-      <div className="lg:hidden block absolute top-12 w-full left-0 right-0 bg-[#e9f2ef] transition ">
+      <div className="lg:hidden block absolute top-12 w-full left-0 right-0 bg-[#e9f2ef] transition z-10 ">
         <ul className="text-center text-xl p-20">
           <Link spy= {true} smooth={true} to="/home">
             <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">
@@ -21,17 +22,23 @@ export const Nav = () => {
               Home
             </li>
           </Link>
-          <Link spy= {true} smooth={true} to="/about">
-            <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">About</li>
-          </Link>
           <Link spy= {true} smooth={true} to="/services">
-            <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">Services</li>
+            <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">
+            <MdOutlineVaccines className="inline mr-2" />
+              Veterenary
+            </li>
           </Link>
           <Link spy= {true} smooth={true} to="/projects">
-            <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">Projects</li>
+            <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">
+            <FaUser className="inline mr-2" />
+              About
+            </li>
           </Link>
           <Link spy= {true} smooth={true} to="/contact">
-            <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">Contact</li>
+            <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">
+            <FaEnvelope className="inline mr-2" />
+              Contact
+            </li>
           </Link>
         </ul>
       </div>
@@ -52,16 +59,16 @@ export const Nav = () => {
                   Home
                 </li>
               </Link>
-              <Link spy= {true} smooth={true} to="/about">
-                <li className="hover:text-[#03A460] transition py-2 px-2 border-b-2 border-slate-900 hover:border-[#03A460] cursor-pointer">
-                <FaClipboardList className="inline mr-2" />
-                  Projects
-                </li>
-              </Link>
               <Link spy= {true} smooth={true} to="/services">
                 <li className="hover:text-[#03A460] transition py-2 px-2 border-b-2 border-slate-900 hover:border-[#03A460] cursor-pointer">
-                <FaBriefcase className="inline mr-2" />
-                  Services
+                <MdOutlineVaccines className="inline mr-2" />
+                  Veterenary
+                </li>
+              </Link>
+              <Link spy= {true} smooth={true} to="/projects">
+              <li className="hover:text-[#03A460] transition py-2 px-2 hover:border-b-2 hover:border-slate-900 hover:border-[#03A460] cursor-pointer">
+                <FaEnvelope className="inline mr-2" />
+                  Contact
                 </li>
               </Link>
               <Link spy= {true} smooth={true} to="/projects">
@@ -72,8 +79,8 @@ export const Nav = () => {
               </Link>
               <Link spy= {true} smooth={true} to="/contact">
                 <li className="text-white cursor-pointer transition py-[10px] px-2 bg-[#03A460] rounded-md hover:bg-[#065f3a] ">
-                <FaEnvelope className="inline mr-2" />
-                  Contact
+                <CiLogout className="inline mr-2" />
+                  Log out
                 </li>
               </Link>
             </ul>
