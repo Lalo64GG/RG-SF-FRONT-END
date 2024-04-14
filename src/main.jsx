@@ -7,6 +7,7 @@ import { Login } from './Components/Organims/Login.jsx'
 import { Nav } from './Components/Molecules/Nav.jsx'
 import { Home } from './Components/Organims/Home.jsx'
 import { Layout } from './Components/Layout.jsx'
+import { Granja } from './Components/Organims/Granja.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,14 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home/>,
+      },
+      {
+        path: "/granja/:id",
+        element:<Granja/>
+      },
+      {
+        path: "/veterinary",
+
       }
     ]
   }
