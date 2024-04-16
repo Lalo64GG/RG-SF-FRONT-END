@@ -1,20 +1,17 @@
-import React from 'react'
+// import React from "react";
 
-export const Granja = () => {
+import Banner from "../Molecules/Banner";
+function Granja() {
   return (
-    <div className='mt-6'>
-        <div className=' w-full lg:flex flex-col hidden lg:w-1/2 '>
-            <div className=' mb-5'>
-                 <h1 className='text-4xl font-bold text-gray-900 text-center'>Granja</h1>
-                 <img src="" alt="sdasd" />
-                 <video src="" alt="sfsdfsdfsdfsdfsd"></video>
-            </div>
-            <div className=' mb-5'>
-                <h1 className='text-4xl font-bold text-gray-900 text-center'>Granja</h1>
-                <img src="" alt="asdasdasd" />
-                <video src=""></video>
-            </div>
-        </div>
-    </div>
-  )
+    <>
+      <div className="grid grid-cols-1 justify-center items-center gap-x-4 mt-10  max-sm:grid-cols-1 max-md:grid-cols-1">
+        <Banner />
+      </div>
+      <div className="grid grid-cols-3 justify-center items-center gap-x-4  max-sm:grid-cols-1 max-md:grid-cols-2 content-center">
+   
+      </div>
+    </>
+  );
 }
+
+export default Granja;

@@ -1,43 +1,32 @@
-import React from 'react'
+import { MdOutlineVaccines } from "react-icons/md";
+import { CiMenuFries, CiLogout } from "react-icons/ci";
 
-export const Card = () => {
+export const Card = ({ encierro }) => {
   return (
-    <div className=' bg-white flex flex-col justify-center items-center w-72 rounded-md shadow-md my-5'>
-        <div className='w-full'>
-          <img 
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBWl_Jj8mn86wIMP4Qr3zEOOsfZL30oNsLry7PSyptYg&s"
-            className=' rounded-t-md w-full'
-          />
-        </div>
-        <div>
-          <h2 className=' text-center font-bold text-2xl text-[#03A460]'>
-            Granja 1
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nesciunt blanditiis aspernatur. Aliquam consequuntur molestias, voluptatum dolorem reprehenderit, saepe facilis velit consectetur 
-          </p>
-
-          <div className='bg-[#FFCB47] h-12 w-full rounded-b-md mt-4 py-2 flex justify-between items-center'>
-          <div className=' h-12 flex flex-col justify-center items-center px-2'>
-            <p className="text-white text-center font-bold">
-              Temperatura: 
-          
-            </p>
-            <span className='text-white font-normal text-center'>
-                25°C
-              </span>
-          </div>
-          <div className='border-x-2 border-black h-12 px-2'>
-            <p className="text-white font-semibold text-center">
-              Comida:
-              <span className=' font-normal text-center '> 2Kg</span>
-            </p>
-          </div>
-          <div className='  px-4'>
-            <p className="text-white font-semibold rounded-md">Agua: 1 L</p>
-          </div>
-        </div>
-        </div>
+    <div className="bg-white shadow-md rounded-md p-4">
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-lg font-bold">{encierro.name}</h2>
+        <span className="text-gray-500">
+          {encierro.temperature}°C <MdOutlineVaccines />
+        </span>
+      </div>
+      <div className="flex justify-between items-center mb-4">
+        <span className="text-gray-500">
+          Humedad: {encierro.humidity}% <CiMenuFries />
+        </span>
+        <span className="text-gray-500">
+          Comida: {encierro.food} <CiMenuFries />
+        </span>
+      </div>
+      <div className="flex justify-between items-center">
+        <span className="text-gray-500">
+          Agua: {encierro.water} <CiMenuFries />
+        </span>
+        <button className="text-red-500 hover:text-red-700">
+          <CiLogout />
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
+
