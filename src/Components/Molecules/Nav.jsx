@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaTimes, FaHome, FaClipboardList, FaBriefcase, FaUser, FaEnvelope } from "react-icons/fa";
 import { MdOutlineVaccines } from "react-icons/md"
 
 import { CiMenuFries, CiLogout } from "react-icons/ci"
 
 export const Nav = () => {
+    const navigate = useNavigate();
 
     const [click, setClick ] = useState(false)
 
     const handleClick = ( ) => setClick(!click)
+
+    const handlePressLogOut = () => {
+      localStorage.clear('token')
+      localStorage.clear('id')
+      navigate('/')
+    }
 
 
   const content = (
@@ -28,16 +35,22 @@ export const Nav = () => {
               Veterenary
             </li>
           </Link>
-          <Link spy= {true} smooth={true} to={"/projects"}>
+          <Link spy= {true} smooth={true} to={"/about us"}>
             <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">
             <FaUser className="inline mr-2" />
-              About
+              About us
             </li>
           </Link>
           <Link spy= {true} smooth={true} to={"/contact"}>
             <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">
             <FaEnvelope className="inline mr-2" />
               Contact
+            </li>
+          </Link>
+          <Link spy= {true} smooth={true} onClick={handlePressLogOut}>
+            <li className="my-4 py-4 border-b border-slate-800 hover:bg-[#d0d6d4] hover:rounded">
+            <FaEnvelope className="inline mr-2" />
+             Log out
             </li>
           </Link>
         </ul>
@@ -71,14 +84,14 @@ export const Nav = () => {
                   Contact
                 </li>
               </Link>
-              <Link spy= {true} smooth={true} to={"/projects"}>
+              <Link spy= {true} smooth={true} to={"/about us"}>
                 <li className="cursor-pointer transition py-2 px-2 bg-none rounded-md border-2 border-[#03A460] ">
                 <FaUser className="inline mr-2" />
                   About us
                 </li>
               </Link>
-              <Link spy= {true} smooth={true} to={"/"}>
-                <li className="text-white cursor-pointer transition py-[10px] px-2 bg-[#03A460] rounded-md hover:bg-[#065f3a] ">
+              <Link spy= {true} smooth={true} >
+                <li className="text-white cursor-pointer transition py-[10px] px-2 bg-[#03A460] rounded-md hover:bg-[#065f3a] " onClick={handlePressLogOut}>
                 <CiLogout className="inline mr-2" />
                   Log out
                 </li>

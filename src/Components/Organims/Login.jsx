@@ -2,6 +2,8 @@ import { usePost } from "../../../public/hooks/usePost";
 import { Form } from "../Molecules/Form";
 
 export const Login = () => {
+
+  
   return (
     <div className=" h-screen w-full flex-1 flex">
       <div className="w-full lg:w-9/12 flex justify-center items-center">
@@ -15,12 +17,9 @@ export const Login = () => {
           </h2>
           <div className=" border-2 w-10 inline-block border-white mb-2 "></div>
           <p className="mb-2">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque,
-            quos.
+            This is a application from 
           </p>
-          <button className="border-2 border-[#FFCB47] hover:bg-[#065f3a] rounded-md px-12 py-2">
-            Sing up
-          </button>
+          
         </div>
       </div>
     </div>

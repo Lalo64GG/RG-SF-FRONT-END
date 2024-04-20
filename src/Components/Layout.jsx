@@ -6,7 +6,7 @@ export const Layout = () => {
   return (
    <div>
      <div className='shadow-lg border-black border-b-2 border-dashed'>
-        <Nav/>
+        <NavNav/>
       
     </div>
     <main className='px-10 '>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export const Input = ({ type, placeholder, icon, setState }) => {
+export const Input = ({ type, placeholder, icon, style, setState }) => {
   return (
     <div className="relative">
     {icon && (
@@ -11,7 +11,7 @@ export const Input = ({ type, placeholder, icon, setState }) => {
     <input
       type={type}
       placeholder={placeholder}
-      className={`pl-${icon ? "8" : "2"} px-8 py-2 border rounded-md w-full`}
+      className={`pl-${icon ? "8" : "2"} px-8 py-2 border rounded-md w-full ${style}`}
       onChange={(e) => setState(e.target.value)}
     />
   </div>

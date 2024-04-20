@@ -23,3 +23,9 @@
     background-color: #2d3748; /* Color del fondo del scrollbar */
     border-radius: 2px;
   }
+  
+.ttle{
+  font-weight: bold;
+  font-size: 20rem;
+  font-family: 'Open Sans', sans-serif;
+}

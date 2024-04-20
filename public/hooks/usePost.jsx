@@ -3,8 +3,11 @@ import { useState } from "react";
 export const usePost = (url, postObject) => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [mssge, setMssge] = useState();
 
   const handleSubmit = async (e) => {
+    const token = localStorage.getItem('token')
+    console.log(token);
     e.preventDefault();
     try {
       console.log(postObject);
@@ -19,7 +22,7 @@ export const usePost = (url, postObject) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: ` ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify(postObject),
       });
@@ -30,9 +33,14 @@ export const usePost = (url, postObject) => {
       if (data.data.token) {
         localStorage.setItem("token", data.data.token);
       }
+      if (data.id) {
+        localStorage.setItem("id", data.id);
+      }
       if (data.status === "success") {
         setSuccess(true);
       }
+
+      setMssge(data.status)
 
       return true;
     } catch (error) {
@@ -45,5 +53,6 @@ export const usePost = (url, postObject) => {
     handleSubmit,
     error,
     success,
+    mssge
   };
 };

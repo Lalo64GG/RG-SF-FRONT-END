@@ -6,6 +6,7 @@ import { Login } from "./Components/Organims/Login.jsx";
 import { Home } from "./Components/Organims/Home.jsx";
 import { Layout } from "./Components/Layout.jsx";
 import Granja from "./Components/Organims/Granja.jsx";
+import LandingPage from "./Components/Organims/LadingPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:'/about us',
+    element: <LandingPage/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
